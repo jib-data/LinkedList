@@ -1,6 +1,6 @@
 package com.jibril.richter;
 
-public class MyLinkedList {
+public class LinkedList {
 
     private Node head;
     private Node tail;
@@ -14,10 +14,10 @@ public class MyLinkedList {
             this.value = value;
         }
     }
-    public MyLinkedList(){
+    public LinkedList(){
 
     };
-    public MyLinkedList(int value){
+    public LinkedList(int value){
         Node newNode = new Node(value);
         head = newNode;
         tail = newNode;
@@ -178,5 +178,20 @@ public class MyLinkedList {
         }
 
         return slow;
+    }
+
+    public boolean hasLoop(){
+        Node hare = head;
+        Node tortoise = head;
+
+        while(hare !=null && tortoise != null){
+            hare = hare.next.next;
+            tortoise = tortoise.next;
+
+            if(hare == tortoise){
+                return true;
+            }
+        }
+        return false;
     }
 }

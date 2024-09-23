@@ -8,7 +8,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        MyLinkedList myll = new MyLinkedList(2);
+        LinkedList myll = new LinkedList(2);
         myll.appendNode(4);
         myll.printList();
         myll.removeLast();
