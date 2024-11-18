@@ -8,16 +8,16 @@ public class App
 {
     public static void main( String[] args )
     {
-        LinkedList myll = new LinkedList(2);
-        myll.appendNode(4);
-        myll.printList();
-        myll.removeLast();
-        System.out.println(".............................................................................");
-        myll.printList();
-        myll.removeLast();
-        System.out.println(".............................................................................");
-        myll.printList();
+        DoublyLinkedList dll = new DoublyLinkedList(3);
+        dll.appendNode(4);
+        dll.prependNode(1);
+        dll.appendNode(77);
 
+//        dll.printList();
+//        dll.removeLast();
+        dll.setNode(3, 100);
+//        dll.printList();
+        System.out.println( dll.getNode(3).value);
 
     }
 }

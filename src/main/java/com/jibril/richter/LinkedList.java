@@ -157,7 +157,7 @@ public class LinkedList {
     }
 
     public void reverseNode(){
-        Node temp = this.head.next;
+        Node temp = this.head;
         this.head = this.tail;
         this.tail= temp;
         Node nextNode = temp.next;
