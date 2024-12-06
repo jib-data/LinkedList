@@ -1,4 +1,4 @@
-package com.jibril.richter;
+package com.jibril.richter.datastructures;
 
 public class BinarySearchTree {
     private Node root;
@@ -64,5 +64,36 @@ public class BinarySearchTree {
             }
         }
         return false;
+    }
+
+    private boolean recursiveContains(Node currentNode, int value){
+        if (currentNode == null){
+            return false;
+        }
+        if (currentNode.value == value){
+            return true;
+        }
+        if (value < currentNode.value){
+            return recursiveContains(currentNode.left, value);
+        } else {
+            return recursiveContains(currentNode.right, value);
+        }
+    }
+
+    public boolean rContains(int value){
+        return recursiveContains(root, value);
+    }
+
+    private Node recursiveInsert(Node currentNode, int value){
+        if (currentNode == null){
+            return new Node(value);
+        }
+        if(value < currentNode.value){
+            currentNode.left = recursiveInsert(currentNode.left, value);
+        } else {
+            currentNode.right = recursiveInsert(currentNode.right, value);
+        }
+        return currentNode;
+
     }
 }

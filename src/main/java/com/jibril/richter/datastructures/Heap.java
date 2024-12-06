@@ -1,4 +1,4 @@
-package com.jibril.richter;
+package com.jibril.richter.datastructures;
 
 import java.util.ArrayList;
 import java.util.List;

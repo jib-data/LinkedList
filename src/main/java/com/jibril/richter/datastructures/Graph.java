@@ -1,9 +1,6 @@
-package com.jibril.richter;
-
-import jdk.internal.joptsimple.internal.Strings;
+package com.jibril.richter.datastructures;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 
 public class Graph {

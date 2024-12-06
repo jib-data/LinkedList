@@ -1,5 +1,8 @@
 package com.jibril.richter;
 
+import com.jibril.richter.algorithms.Recursion;
+import com.jibril.richter.datastructures.BinarySearchTree;
+
 /**
  * Hello world!
  *
@@ -19,8 +22,9 @@ public class App
 ////        dll.printList();
 //        System.out.println( dll.getNode(3).value);
 
-        BinarySearchTree bst = new BinarySearchTree();
-        System.out.println(bst.getRoot());
+        Recursion recursion = new Recursion();
+//        recursion.forLoop(5);
+        recursion.recursiveLoop(100);
 
     }
 }

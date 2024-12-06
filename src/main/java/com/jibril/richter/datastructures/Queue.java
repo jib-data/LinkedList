@@ -1,4 +1,4 @@
-package com.jibril.richter;
+package com.jibril.richter.datastructures;
 
 public class Queue {
     private Node first;
